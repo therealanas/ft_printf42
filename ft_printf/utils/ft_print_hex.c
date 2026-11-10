@@ -14,6 +14,20 @@
 
 int ft_print_hex(int n,int x)
 {
+    int count;
+    int r;
+
+    r = 0;
+    count =0;
+    r = ft_print_hex_help(n,x,&count);
+    if (r == -1)
+        return (-1);
+    return (count);
+
+    
+}
+int ft_print_hex_help(int n,int x,int *count)
+{
 	char *hex = "0123456789abcdef";
 	char *HEX = "0123456789ABCDEF";
 	int r;
@@ -24,20 +38,26 @@ int ft_print_hex(int n,int x)
 		if (x)
 		{
 			r = write(1,&HEX[n],1);
+            (*count)++;
 			if (r == -1)
 			return (-1);
 		}
 		else 
 		{
 			r = write(1,&hex[n],1);
+            (*count)++;
 			if (r == -1)
 			return (-1);	
 		}
 	} 
 	else
 	{
-		ft_print_hex(n/16,x);
-		ft_print_hex(n%16,x);
+		r = ft_print_hex_help(n/16,x,count);
+            if (r == -1)
+ 43             return (-1);
+		r = ft_print_hex_help(n%16,x,count);
+            if (r == -1)
+ 43             return (-1);
 	}
 	return (0);
 }

@@ -20,6 +20,8 @@ int 	ft_printstr(char *s)
 	count = 0;
 	l = ft_strlen(s);
 	r = 0;
+    if (!s)
+        s = "(null)";
 	while (count != l)
 	{	
 		r = write(1,s + count,l - count);
