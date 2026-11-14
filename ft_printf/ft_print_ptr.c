@@ -6,7 +6,7 @@
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 11:26:40 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/14 15:02:12 by ahoumdi          ###   ########.fr       */
+/*   Updated: 2026/11/14 16:50:41 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,13 @@ int ft_print_ptr(void *ptr)
 
 	r = 0;
     count = 0;
-	r = write(1,"0x",2);
+    if (ptr == NULL)
+        return (ft_printstr("(nil)"));
+    r = write(1,"0x",2);
     if (r == -1)
         return (-1);
     count += 2;
-	r = ft_print_ptr_help(p,&count);
+    r = ft_print_ptr_help(p,&count);
 	if (r == -1)
 		return (-1);
 	return (count);

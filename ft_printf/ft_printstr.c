@@ -6,7 +6,7 @@
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 14:44:03 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/14 15:06:57 by ahoumdi          ###   ########.fr       */
+/*   Updated: 2026/11/14 17:08:43 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -18,10 +18,10 @@ int 	ft_printstr(char *s)
 	size_t count;
 
 	count = 0;
-	l = ft_strlen(s);
 	r = 0;
     if (!s)
         s = "(null)";
+    l = ft_strlen(s);
     while (count != l)
 	{	
 		r = write(1,s + count,l - count);

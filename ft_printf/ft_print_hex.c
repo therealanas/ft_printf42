@@ -6,12 +6,12 @@
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 08:04:16 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/14 15:03:05 by ahoumdi          ###   ########.fr       */
+/*   Updated: 2026/11/14 17:01:20 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int ft_print_hex(int n,int x)
+int ft_print_hex(unsigned  int n,int x)
 {
     int count;
     int r;
@@ -25,7 +25,7 @@ int ft_print_hex(int n,int x)
 
     
 }
-int ft_print_hex_help(int n,int x,int *count)
+int ft_print_hex_help(unsigned int n,int x,int *count)
 {
 	char *hex = "0123456789abcdef";
 	char *HEX = "0123456789ABCDEF";

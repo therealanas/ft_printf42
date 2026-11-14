@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int ft_printf(char *str, ...)
+int ft_printf(const char *str, ...)
 {
 va_list args;
 int r = 0;
