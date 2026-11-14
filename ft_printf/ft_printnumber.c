@@ -6,11 +6,12 @@
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 15:08:53 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/09 20:37:09 by ahoumdi          ###   ########.fr       */
+/*   Updated: 2026/11/14 13:37:21 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "ft_printf.h"
 
-int ft_ptrintnumber(int n)
+int ft_print_number(int n)
 {
 	int count;
 	int r;
