@@ -11,17 +11,23 @@ va_start(args,str);
     {
         if (*str == '%' && *(str+1))
         {
-            r += ft_process(args,*(str+1));
+            r = ft_process(args,*(str+1));
             if (r == -1)
+            {
+                va_end(args);
                 return (-1);
+            }
             count  += r;
             str += 2;
         }
         else
         {
-            r += ft_printchar(*str);
+            r = ft_printchar(*str);
             if (r == -1)
+            {
+                va_end(args);
                 return (-1);
+            }
             count += r;
             str++;
         }
@@ -29,7 +35,7 @@ va_start(args,str);
 
     va_end(args);
 
-return (r);
+return (count);
 }
 
 int ft_process(va_list args,char c)
@@ -47,9 +53,9 @@ int ft_process(va_list args,char c)
     else if (c == 'u')
         r = ft_print_u_number(va_arg(args,unsigned int));
     else if (c == 'i')
-         r = ft_print_number(va_arg(args,int));
+         r = ft_print_number(va_arg(args,unsigned int));
     else if (c == 'x' ||c == 'X')
-         r = ft_print_hex(va_arg(args,int),c);
+         r = ft_print_hex(va_arg(args,unsigned int),c);
     else if (c == '%')
          r = ft_printpercent();
     return (r);
