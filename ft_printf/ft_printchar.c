@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/08 14:44:03 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/08 16:35:27 by ahoumdi          ###   ########.fr       */
+/*   Created: 2026/11/23 15:58:08 by ahoumdi           #+#    #+#             */
+/*   Updated: 2026/11/23 15:58:19 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int 	ft_printchar(char s)
+int	ft_printchar(char s)
 {
-	ssize_t r;
+	ssize_t	r;
 
 	r = 0;
-		r = write(1,&s,1);
-		if (r <= 0)
-			return (-1);
+	r = write(1, &s, 1);
+	if (r <= 0)
+		return (-1);
 	return (1);
 }

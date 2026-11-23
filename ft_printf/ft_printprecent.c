@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/08 16:41:00 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/08 16:44:43 by ahoumdi          ###   ########.fr       */
+/*   Created: 2026/11/23 16:04:52 by ahoumdi           #+#    #+#             */
+/*   Updated: 2026/11/23 16:04:56 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "ft_printf.h"
-int ft_printpercent(void)
+
+int	ft_printpercent(void)
 {
 	return (ft_printchar('%'));
 }

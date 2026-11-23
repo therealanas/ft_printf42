@@ -5,30 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/09 15:08:53 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/14 13:50:51 by ahoumdi          ###   ########.fr       */
+/*   Created: 2026/11/23 16:03:25 by ahoumdi           #+#    #+#             */
+/*   Updated: 2026/11/23 16:03:30 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "ft_printf.h"
-int ft_print_u_number(unsigned int n)
+
+int	ft_print_u_number(unsigned int n)
 {
-	int count;
-	int r;
+	int	count;
+	int	r;
 
 	r = 0;
 	count = 0;
-	r = ft_putnbr_u(n,&count);\
+	r = ft_putnbr_u(n, &count);
 	if (r == -1)
 		return (-1);
 	return (count);
-
 }
 
-int ft_putnbr_u(unsigned int num,int *count)
+int	ft_putnbr_u(unsigned int num, int *count)
 {
 	char	c;
-	int 	r;
+	int		r;
 
 	c = '0';
 	r = 0;
