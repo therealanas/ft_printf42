@@ -6,7 +6,7 @@
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 15:58:08 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/23 15:58:19 by ahoumdi          ###   ########.fr       */
+/*   Updated: 2026/11/24 14:55:12 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -17,7 +17,7 @@ int	ft_printchar(char s)
 
 	r = 0;
 	r = write(1, &s, 1);
-	if (r <= 0)
+	if (r != 1)
 		return (-1);
 	return (1);
 }

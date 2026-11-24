@@ -6,7 +6,7 @@
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:03:25 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/23 16:03:30 by ahoumdi          ###   ########.fr       */
+/*   Updated: 2026/11/24 14:57:19 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -39,7 +39,7 @@ int	ft_putnbr_u(unsigned int num, int *count)
 	}
 	c += num % 10;
 	r = write(1, &c, 1);
-	if (r == -1)
+	if (r != 1)
 		return (-1);
 	*count += r;
 	return (0);

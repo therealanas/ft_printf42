@@ -6,7 +6,7 @@
 /*   By: ahoumdi <ahoumdi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:02:16 by ahoumdi           #+#    #+#             */
-/*   Updated: 2026/11/23 16:02:26 by ahoumdi          ###   ########.fr       */
+/*   Updated: 2026/11/24 15:52:08 by ahoumdi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -37,13 +37,13 @@ int	ft_print_ptr_help(uintptr_t n, int *count)
 	char	*hex;
 	int		r;
 
-	*hex = "0123456789abcdef";
+	hex = "0123456789abcdef";
 	r = 0;
 	if (n < 16)
 	{
 		r = write(1, &hex[n], 1);
 		(*count)++;
-		if (r == -1)
+		if (r != 1)
 			return (-1);
 	}
 	else
